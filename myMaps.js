@@ -12,13 +12,13 @@ map_manager.map_items = [
     }
 ]
 function query_pokemon_data() {
-    var bounds=map_manager.map.getBounds();
+    var bounds = map_manager.map.getBounds();
     var apigClient = apigClientFactory.newClient();
     var params = {
         //This is where any header, path, or querystring request params go. The key is the parameter named as defined in the API
         north: 'bounds.getNorth()',
         south: 'bounds.getSouth()',
-        west:'bounds.getwest()',
+        west:'bounds.getWest()',
         east:'bounds.getEast()'
     };
 
@@ -58,7 +58,7 @@ function refresh_pokemon_layer() {
     var pushpins = [];
     for (var i in map_manager.map_items) {
         var map_item = map_manager.map_items[i];
-        var icon_url = 'https://raw.githubusercontent.com/longshootzb/firstproject/master/pokemon/' + map_item["pokemon_id"] + '.png';
+        var icon_url = 'https://raw.githubusercontent.com/longshootzb/crawl_website/master/pokemon/' + map_item["pokemon_id"] + '.png';
         var count_down = get_counter_down_time_from_expire_epoch(map_item["expire"]);
         var pushpin = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(map_item["latitude"], map_item["longitude"]), 
                                                  {title: count_down,
