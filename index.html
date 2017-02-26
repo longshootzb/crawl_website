@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <title>loadMapAsyncHTML</title>
-    <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
-</head>
-
-<body>
-    <div id='printoutPanel'></div>
-
-    <div id='myMap' style='width: 100vw; height: 100vh;'></div>
-    <script type='text/javascript'>
-        var map;
+    <head>
+        <title>loadMapAsyncHTML</title>
+        <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+    </head>
+    <body>
+        <div id='printoutPanel'></div>
+        
+        <div id='myMap' style='width: 100vw; height: 100vh;'></div>
+        <script type='text/javascript'>
+                var map;
                 function loadMapScenario() {
                     map = new Microsoft.Maps.Map(document.getElementById('myMap'), {
                         credentials: 'Ak_CT-vyf292xIZngp3YP-WiImhZVudaJUbs1o7hLapdMIdRtGvxOlnJPbzf5vpn'
                     });
                 }
-    </script>
-    <script type='text/javascript' src='https://cn.bing.com/api/maps/sdkrelease/mapcontrol?branch=experimental&callback=loadMapScenario'async defer></script>
-</body>
-
+                
+            
+        </script>
+        <script type='text/javascript' src='https://cn.bing.com/api/maps/sdkrelease/mapcontrol?branch=experimental&callback=loadMapScenario' async defer></script>
+    </body>
 </html>
